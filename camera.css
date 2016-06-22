@@ -1,0 +1,395 @@
+body {
+    background-color: #46B09D;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2 {
+/*    background-color: #CCC;*/
+    text-align: center;
+margin: 0;
+    font-family: 'Lobster', cursive;
+    color: #334D5D;
+    padding: 0;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100px;
+    padding-top: 50px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+#camera {
+    width: 800px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #46B09D;
+    display: block;
+}
+
+
+/* CAMERA FACE AND BLUE BUTTON */
+
+#camera-front {
+    background-color: #F4EFC9;
+    width: 300px;
+    height: 150px;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    z-index: 3;
+    position: absolute;
+    transform: translate(-196px, 72px);
+}
+
+#camera-front:before {
+    width: 100%;
+    bottom: 0;
+    height: 135px;
+    background-color: #D4D0B4;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: absolute;
+    content: "";
+}
+
+#camera-front:after {
+    width: 65px;
+    height: 26px;
+    background-color: #334D5D;
+    border-radius: 8px;
+    position: absolute;
+    content: "";
+    transform: translate(15px, 50px);
+}
+
+
+/* END OF CAMERA FACE AND BLUE BUTTON */
+
+
+/* BACK AND FLASH OF CAMERA */
+
+#flash {
+    border-bottom: 60px solid #233643;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    height: 0;
+    width: 90px;
+    z-index: 1;
+    transform: translate(440px, 50px);
+    right: 0;
+}
+
+#flash:before {
+    background-color: #636A75;
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 35px;
+    transform: translate(15px, 15px);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-left: 5px solid #575D66;
+}
+
+
+/* BACK OF CAMERA */
+
+#flash:after {
+    border-bottom: 40px solid #334D5D;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 0;
+    width: 280px;
+    z-index: 2;
+    position: absolute;
+    content: "";
+    transform: translate(-196px, 50px);
+}
+
+
+/* END OF FLASH AND BACK OF CAMERA */
+
+
+/* CAMERA HOOD */
+
+#camera-hood {
+    border-bottom: 65px solid #F4EFC9;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    height: 0;
+    width: 300px;
+    position: absolute;
+    transform: translate(-10px, 150px);
+}
+
+#camera-hood:after {
+    position: absolute;
+    content: "";
+    background-color: #D9D0A0;
+    width: 320px;
+    height: 15px;
+    transform: translate(-10px, 65px);
+}
+
+
+/* END OF CAMERA HOOD */
+
+
+/* CAMERA SLOT */
+
+#camera-slot {
+    position: absolute;
+    background-color: #7C5650;
+    width: 320px;
+    height: 75px;
+    transform: translate(-10px, 80px);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#camera-slot:before {
+    position: absolute;
+    content: "";
+    background-color: #2A2E36;
+    width: 290px;
+    height: 25px;
+    transform: translate(15px, 25px);
+    border-top: 10px solid #A3837D;
+}
+
+
+/* END OF CAMERA SLOT */
+
+
+/* CAMERA LENS */
+
+#lens {
+    position: absolute;
+    /*    background-color: #FFF;*/
+    width: 120px;
+    height: 128px;
+    transform: translate(90px, 15px);
+}
+
+#lens-inner {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #D8D6D8;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 10px solid #56887E;
+    transform: translateY(35px);
+}
+
+#lens-middle {
+    position: relative;
+    background-color: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 10px solid #8DBEB2;
+    transform: translate(-17px, -15px);
+}
+
+#lens-middle:after {
+    position: absolute;
+    content: "";
+    background-color: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 12px solid #5D4A53;
+    transform: translate(-17px, -15px);
+}
+
+#lens-outer {
+    position: absolute;
+    background-color: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 20px solid #49363E;
+    transform: translate(-48px, -103px);
+}
+
+#lens-outer:after {
+    position: absolute;
+    content: "";
+    background-color: none;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 32px solid #2A2E36;
+    transform: translate(-20px, -14px);
+}
+
+
+/* END OF CAMERA LENS */
+
+
+/* CAMERA VIEWFINDER */
+
+#viewfinder {
+    position: absolute;
+    background-color: #575D66;
+    width: 55px;
+    height: 55px;
+    transform: translate(225px, 30px);
+    border-radius: 5px;
+    border: 3px solid #233643;
+}
+
+#viewfinder:before {
+    position: absolute;
+    content: "";
+    background-color: #636A75;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#viewfinder:after {
+    position: absolute;
+    content: "";
+    background-color: #D8D6D8;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    transform: translate(8px, 3px);
+    opacity: 0.2;
+}
+
+
+/* END OF CAMERA VIEWFINDER */
+
+
+/* CAMERA BUTTONS */
+
+#button {
+    position: absolute;
+    background-color: #F15F61;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transform: translate(25px, 85px);
+    border: 2px solid #5A5150;
+}
+
+#button:hover {
+    background-color: #E0585A;
+    cursor: pointer;
+}
+
+#shutter {
+    opacity: 0;
+    transition: all .1s ease-in;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #FFF;
+    margin: 0;
+}
+
+#shutter.on {
+    opacity: 1;
+}
+
+#dial {
+    position: absolute;
+    background-color: #334D5D;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    transform: translate(225px, 100px);
+    border: 4px solid #2A2E36;
+}
+
+
+/* END OF CAMERA BUTTONS */
+
+
+/* STRIPES */
+
+#stripe-top,
+#stripe-bottom {
+    position: absolute;
+    background-color: #AB8C33;
+    width: 5px;
+    height: 15px;
+    border-left: 5px solid #A45D1D;
+    border-right: 5px solid #438C6F;
+}
+
+#stripe-top {
+    transform: translateX(143px);
+    bottom: 0;
+}
+
+#stripe-bottom {
+    transform: translate(143px, 65px);
+    z-index: 6;
+}
+
+#stripe-top:before,
+#stripe-bottom:before {
+    position: absolute;
+    content: "";
+    background-color: #A13A46;
+    width: 5px;
+    height: 15px;
+    transform: translateX(-10px);
+}
+
+#stripe-top:after,
+#stripe-bottom:after {
+    position: absolute;
+    content: "";
+    background-color: #3E5361;
+    width: 5px;
+    height: 15px;
+    transform: translateX(10px);
+}
+
+#stripe-middle {
+    position: absolute;
+    background-color: #F0C84D;
+    width: 5px;
+    height: 65px;
+    border-left: 5px solid #EB8529;
+    border-right: 5px solid #5FC99C;
+    transform: translateX(143px);
+}
+
+#stripe-middle:before,
+#stripe-middle:after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 65px;
+}
+
+#stripe-middle:before {
+    background-color: #E55367;
+    transform: translateX(-10px);
+}
+
+#stripe-middle:after {
+    background-color: #567689;
+    transform: translateX(10px);
+}
+
+
+/* END OF STRIPES */

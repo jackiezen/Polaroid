@@ -2,72 +2,73 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Camera | Jacquelyn Zen</title>
-    <link rel="stylesheet" type="text/css" href="camera.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link rel="icon" type="image/ico" href="images/favicon.ico">
+	<meta charset="UTF-8">
+	<title>Camera | Jacquelyn Zen</title>
+	<link rel="stylesheet" type="text/css" href="camera.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<link rel="icon" type="image/ico" href="images/favicon.ico">
 </head>
 
 <body>
-    <div id="shutter"></div>
-    <audio src="http://www.soundjay.com/mechanical/camera-shutter-click-08.mp3"></audio>
-    <div id="camera">
-        <h1>Polaroid</h1>
-        <h2>by Jacquelyn Zen</h2>
-        <div id="flash">
-            <div id="camera-front">
-                <div id="stripe-top"></div>
-                <div id="lens">
-                    <div id="lens-inner">
-                        <div id="lens-middle">
-                        </div>
-                        <div id="lens-outer">
-                        </div>
-                    </div>
-                </div>
-                <div id="viewfinder"></div>
-                <div id="camera-hood">
-                    <div id="stripe-middle"></div>
-                    <div id="stripe-bottom"></div>
-                    <div id="camera-slot"></div>
-                </div>
-                <div id="button"></div>
-                <div id="dial"></div>
-            </div>
-        </div>
-    </div>
+	<div id="shutter"></div>
+	<audio src="http://www.soundjay.com/mechanical/camera-shutter-click-08.mp3"></audio>
+	<div id="camera">
+		<h1>Polaroid</h1>
+		<h2>by Jacquelyn Zen</h2>
+		<div id="flash">
+			<div id="camera-front">
+				<div id="stripe-top"></div>
+				<div id="lens">
+					<div id="lens-inner">
+						<div id="lens-middle">
+						</div>
+						<div id="lens-outer">
+						</div>
+					</div>
+				</div>
+				<div id="viewfinder"></div>
+				<div id="camera-hood">
+					<div id="stripe-middle"></div>
+					<div id="stripe-bottom"></div>
+					<div id="camera-slot"></div>
+				</div>
+				<div id="button"></div>
+				<div id="dial"></div>
+			</div>
+		</div>
+	</div>
 </body>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
 <script>
-    $(document).ready(function () {
-        $('#button').click(function () {
-            $('#shutter').addClass('on');
-            $('audio')[0].play();
-            setTimeout(function () {
-                $('#shutter').removeClass('on');
-            }, 30 * 2 + 45); /* Shutter speed (double & add 45) */
-        });
-    });
+	$(document).ready(function () {
+		$('#button').click(function () {
+			$('#shutter').addClass('on');
+			$('audio')[0].play();
+			setTimeout(function () {
+				$('#shutter').removeClass('on');
+			}, 30 * 2 + 45); /* Shutter speed (double & add 45) */
+		});
+	});
 </script>
 
 <script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+	(function (i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function () {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-69037881-1', 'auto');
-    ga('send', 'pageview');
+	ga('create', 'UA-69037881-1', 'auto');
+	ga('send', 'pageview');
 </script>
 
 </html>
